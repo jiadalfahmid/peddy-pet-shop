@@ -22,17 +22,12 @@
          fontFamily: {
             lato: ['Lato', 'sans-serif'],
          },
-         extend: {
-            colors: {
-               clifford: '#da373d',
-            }
-         }
          }
       }
    </script>
 </head>
 <body class="font-lato">
-   <header>
+   <header class="py-4">
       <div class="navbar container mx-auto">
          <div class="navbar-start">
          <div class="dropdown">
@@ -86,8 +81,39 @@
          <img src="./images/pet.webp" alt="">
       </section>
       <!-- hero section ends -->
+      <!-- Adopt  Your  Best Friend section -->
+      <section class="mx-auto max-sm:w-11/12 mb-16">
+         <div class="flex flex-col items-center my-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Adopt  Your  Best Friend</h2>
+            <p class="w-11/12 lg:w-2/5">Your new best friend is waiting! Find the perfect pet to bring home love and joy. Start your adoption journey with Peddy today.</p>
+         </div>
+         <div id="categoryBtn" class="my-8 grid grid-cols-2 lg:grid-cols-4 gap-4 justify-between"></div>
+         <div class="flex justify-between my-8">
+            <h3 class="text-xl font-bold">Best Deal For you</h3>
+            <button id="sortBtn" onclick="sortBtnClicked()" class="btn bg-teal-700 hover:text-black text-white">Sort by Price</button>
+         </div>
+         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- cards starts -->
+            <div id="cards" class=" lg:col-span-3 grid lg:grid-cols-3 gap-6"></div>
+            <!-- cards ends -->
+            <div id="liked" class="border rounded-md border-gray-300 p-4 grid-cols-2 grid auto-rows-min gap-4"></div>
+            </div>
+         </section>
+      </section>
+      <!-- Details Modal -->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      </dialog>
+      <!-- Adopt modal -->
+      <dialog id="my_modal_4" class="modal">
+      <div class="modal-box w-11/12 max-w-3xl flex flex-col items-center">
+         <img src="./images/handshake.gif" alt="" class="w-20">
+         <h3 class="text-5xl font-bold">Congrats</h3>
+         <p class="py-4">Adoption process is start for your pet</p>
+            <span id="countdown" class="text-6xl">3</span>
+      </div>
+      </dialog>
    </main>
-   <footer class="footer bg-black text-gray-500 p-10">
+   <footer class="footer bg-black text-gray-500 p-10 justify-between">
       <nav>
       <h6 class="flex text-xl font-bold gap-2 text-white"><img src="./images/logo.webp" alt="">
       Peddy</h6>
@@ -124,5 +150,6 @@
       </fieldset>
       </form>
    </footer>
+   <script src="./js/script.js"></script>
 </body>
 </html>
