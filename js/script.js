@@ -8,3 +8,13 @@ let clicked = false;
 const countdown = document.getElementById("countdown");
 const modal = document.getElementById("my_modal_4");
 let countdownTime = 3;
+
+const loadingTime = (pets) => {
+   loading.classList.remove("hidden");
+   cards.innerHTML = `<div></div><div></div><div id="loading" class="self-center loading loading-dots loading-lg"></div>`;
+   
+   setTimeout(() => {
+      allPetCategory(pets);
+   }, 2000);
+   };
+   
