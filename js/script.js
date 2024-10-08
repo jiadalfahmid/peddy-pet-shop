@@ -18,3 +18,16 @@ const loadingTime = (pets) => {
    }, 2000);
    };
    
+
+   const categoryBtnHandler = async () => {
+      try{
+         const res = await fetch(
+            "https://openapi.programming-hero.com/api/peddy/categories"
+         );
+         const data = await res.json();
+         categoriesBtn(data.categories);
+      } catch(error){
+         console.error("Category fetching failed:", error)
+      }
+   };
+   
