@@ -64,3 +64,10 @@ const loadingTime = (pets) => {
             .getElementById("dog")
             .classList.add("bg-teal-100", "border-teal-700", "rounded-full");
          };
+
+         const activeBtn = (id) => {
+            removeActive();
+            document
+               .getElementById(id)
+               .classList.add("bg-teal-100", "border-teal-700", "rounded-full");
+            };
