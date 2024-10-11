@@ -47,3 +47,20 @@ const loadingTime = (pets) => {
          .getElementById("dog")
          .classList.add("bg-teal-100", "border-teal-700", "rounded-full");
       };
+
+      const categoriesBtn = (buttons) => {
+         buttons.forEach((btn) => {
+            const categoryName = btn.category.toLowerCase();
+            categoryBtn.innerHTML += `
+               <button id="${categoryName}" onclick="loadingTime('${categoryName}'); activeBtn('${categoryName}')" class="btn border-2 bg-white border-teal-50 hover:bg-teal-100 hover:border-teal-700 hover:rounded-full text-xl text-gray-600 py-10">
+                        <div class="-mt-7 flex items-center gap-2">
+                           <img src="${btn.category_icon}" alt="">
+                           ${btn.category}
+                        </div></button>
+               `;
+               
+         });
+         document
+            .getElementById("dog")
+            .classList.add("bg-teal-100", "border-teal-700", "rounded-full");
+         };
